@@ -2,26 +2,27 @@ import PropTypes from 'prop-types';
 import './profile.css';
 
 export const Profile = props => {
+  const { avatar, username, tag, location, stats } = props;
   return (
     <div className="profile">
       <div className="description">
-        <img src={props.avatar} alt="User avatar" className="avatar" />
-        <p className="name">{props.username}</p>
-        <p className="tag">@{props.tag}</p>
-        <p className="location">{props.location}</p>
+        <img src={avatar} alt="User avatar" className="avatar" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
       <ul className="stats">
         <li className="stats-block">
           <span className="label">Followers</span>
-          <span className="quantity">{props.stats.followers.toLocaleString()}</span>
+          <span className="quantity">{stats.followers.toLocaleString()}</span>
         </li>
         <li className="stats-block">
           <span className="label">Views</span>
-          <span className="quantity">{props.stats.views.toLocaleString()}</span>
+          <span className="quantity">{stats.views.toLocaleString()}</span>
         </li>
         <li className="stats-block">
           <span className="label">Likes</span>
-          <span className="quantity">{props.stats.likes.toLocaleString()}</span>
+          <span className="quantity">{stats.likes.toLocaleString()}</span>
         </li>
       </ul>
     </div>
