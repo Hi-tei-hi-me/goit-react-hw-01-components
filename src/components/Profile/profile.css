@@ -9,7 +9,6 @@
 
 .description {
   padding: 10px;
-  border-bottom: 1px solid lightgrey;
 }
 
 .avatar {
@@ -34,6 +33,7 @@
   align-items: center;
   gap: 5px;
   padding: 10px;
+  border-top: 1px solid lightgrey;
 }
 
 .stats-block {
@@ -45,7 +45,4 @@
 
 .label {
   font-weight: bold;
-}
-
-.quantity {
 }

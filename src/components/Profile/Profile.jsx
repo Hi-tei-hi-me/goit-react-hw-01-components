@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import './profile.css';
+import defaultAvatar from './defaultAvatar.jpg';
 
 export const Profile = props => {
-  const { avatar, username, tag, location, stats } = props;
+  const { avatar = defaultAvatar, username, tag, location, stats } = props;
   return (
     <div className="profile">
       <div className="description">
