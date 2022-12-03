@@ -4,6 +4,7 @@
   text-align: center;
   border: 1px solid lightgrey;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -11,7 +12,7 @@
   text-transform: uppercase;
 }
 
-.stat-list {
+.statList {
   display: flex;
   border-top: 1px solid lightgrey;
 }
