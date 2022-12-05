@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
+import { getRandomColor } from '../../utils/getRandomColor';
 import defaultAvatar from '../../utils/defaultAvatar.jpg';
 
 export const Profile = props => {
@@ -12,7 +13,11 @@ export const Profile = props => {
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
       </div>
-      <ul className={css.stats}>
+      <ul
+        className={css.stats}
+        style={{
+          backgroundColor: getRandomColor(),
+        }}>
         <li className={css.statsBlock}>
           <span className={css.label}>Followers</span>
           <span className={css.quantity}>{stats.followers.toLocaleString()}</span>

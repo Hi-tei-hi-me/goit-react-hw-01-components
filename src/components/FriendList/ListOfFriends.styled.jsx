@@ -28,4 +28,5 @@ export const Avatar = styled.img`
 
 export const Name = styled.p`
   width: 100px;
+  font-size: 18px;
 `;
