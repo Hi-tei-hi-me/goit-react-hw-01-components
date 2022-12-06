@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 import { getRandomColor } from '../../utils/getRandomColor';
-import defaultAvatar from '../../utils/defaultAvatar.jpg';
+import defaultAvatar from '../../assets/defaultAvatar.jpg';
 
 export const Profile = props => {
   const { avatar = defaultAvatar, username, tag, location, stats } = props;
@@ -37,8 +37,12 @@ export const Profile = props => {
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  stats: PropTypes.objectOf(PropTypes.number),
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };

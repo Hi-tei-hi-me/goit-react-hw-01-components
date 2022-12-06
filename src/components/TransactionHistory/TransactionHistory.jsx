@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { getRandomColor } from '../../utils/getRandomColor';
 import {
   TransactionTable,
   TableHead,
@@ -14,10 +13,7 @@ import {
 export default function TransactionHistory({ items }) {
   return (
     <TransactionTable>
-      <TableHead
-        style={{
-          backgroundColor: getRandomColor(),
-        }}>
+      <TableHead>
         <TableRow>
           <TableHeader>Type</TableHeader>
           <TableHeader>Amount</TableHeader>
@@ -27,7 +23,6 @@ export default function TransactionHistory({ items }) {
       <TableBody>
         {items.map(({ id, type, amount, currency }) => {
           amount = Number(amount).toLocaleString(undefined, { minimumFractionDigits: 2 });
-          console.log(amount);
           return (
             <TableRow key={id}>
               <TypeData>{type}</TypeData>
@@ -45,9 +40,9 @@ TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
-      type: PropTypes.string,
+      type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
-      currency: PropTypes.string,
+      currency: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 };

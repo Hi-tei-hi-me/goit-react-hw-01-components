@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { getRandomColor } from '../../utils/getRandomColor';
 
 export const TransactionTable = styled.table`
   margin: 20px auto;
@@ -10,10 +11,11 @@ export const TransactionTable = styled.table`
 
 export const TableHead = styled.thead`
   font-size: 20px;
+  background-color: ${getRandomColor()};
 `;
 
 export const TableRow = styled.tr`
-  &:nth-child(even) {
+  &:nth-of-type(even) {
     background-color: lightgrey;
   }
   &:hover,
