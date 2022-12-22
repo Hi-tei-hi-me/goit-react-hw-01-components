@@ -12,6 +12,7 @@ export const Item = styled.li`
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: #fff;
   border: 1px solid lightgrey;
   border-radius: 10px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
